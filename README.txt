@@ -1,4 +1,4 @@
- Für den Anfang:
+ ***Für den Anfang:
 I) Einlesen 
     1) Kontoauszug als PDF als input
     2) Kontostand zu jedem Zeitpunkt des Monats bestimmen

@@ -6,6 +6,7 @@ name = "pypi"
 [packages]
 numpy = "*"
 pandas = "*"
+pypdf2 = {extras = ["crypto"], version = "*"}
 
 [dev-packages]
 
