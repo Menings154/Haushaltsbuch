@@ -1,4 +1,4 @@
- ***Für den Anfang:
+ Für den Anfang:
 I) Einlesen 
     1) Kontoauszug als PDF als input
     2) Kontostand zu jedem Zeitpunkt des Monats bestimmen
@@ -17,9 +17,11 @@ II) Datenvisualisierung
         b) für bestimmte Gruppen/ wiederkehrende Transaktionspunkte
     2) automatisches Handout oder powerpoint generieren (vllt. automatisch Graphen in Excel generieren)
     3) Bericht automatisch generieren lassen und an mich schicken
+    - das vielleicht mit Jupyternotebooks machen?
 
 III) Mit erwarteten Kosten abgleichen und Besonderheiten mir melden
 
 IV) Kassenzettelsystem integrieren
 
 v) tägliches Portmoneesystem integrieren
+

@@ -1,0 +1,23 @@
+Transaction
+    - day: Day
+    - month: Month
+    - year: Year
+    - name: string
+    - value: float
+    - Category: Category
+    - dotw: DayOfTheWeek
+Day
+    - day: int
+Month
+    - month: int
+Year
+    - year: int
+DayOfTheWeek
+    - whichDotW(): string
+Category
+    - name: string
+Categorizer
+
+### später
+Excelschreiber
+Visualisierungsbereich
