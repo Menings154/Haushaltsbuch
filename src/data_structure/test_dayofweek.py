@@ -1,3 +1,5 @@
+# dieser Test muss noch wo anders hin getan werden
+
 from Transaction import Transaction
 from DaysOfTheWeek import DaysOfTheWeek
 

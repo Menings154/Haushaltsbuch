@@ -25,3 +25,5 @@ IV) Kassenzettelsystem integrieren
 
 v) tägliches Portmoneesystem integrieren
 
+
+# Monate und Jahre auch gruppieren?
