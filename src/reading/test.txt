@@ -1,0 +1,54 @@
+erstellt am Blatt vonKontonummer
+Bitte beachten Sie die Hinweise auf der R�ckseite oder am Ende des DokumentsBu-TagNr.
+K000261865117
+0794107008
+ 1/2022
+ 1 3 31.01.2022 22:38Kontokorrent
+Kontoauszug
+EUR-Konto
+VR Bank Rhein-Mosel eG
+Postfach 2052, 56510 Neuwied
+Herrn
+Benjamin Zenz
+Im Lehn 9
+56254 M�den (Mosel)
+5M  79IBAN: DE47 5746 0117 0004 1070 08 BIC: GENODED1NWD
+alter Kontostand vom 30.12.2021Vorgang Wert
+                      4.624,58 H
+03.01. 03.01. Basislastschrift                                                     15,00 S
+              FitX Deutschland GmbH
+              XREF 788-727874-713003 FitX Deutschland versch. Rechnu
+              ngen EREF: 788-727874-713003 MREF: 727874-1 CRED: DE48
+              ZZZ00000858428
+03.01. 03.01. Dauerauftragsgutschr                                                          125,00 H
+              Frank und Monika Zenz
+              Unterst�tzung
+04.01. 04.01. Basislastschrift                                                     31,00 S
+              PayPal (Europe) S.a.r.l. et Cie., S.C.A.
+              PP.1250.PP . , Ihr Einkauf bei EREF: 1017732682350 PP.
+              1250.PP PAYPAL MREF: 52NJ224X8RGM2 CRED: LU96ZZZ000000
+              0000000000058
+04.01. 04.01. Dauerauftragsbelast                                                   7,50 S
+              Rebecca Emrich
+              Abos /*DA-2* IBAN: DE31570691440000201574 BIC: GENODED
+              1KAI
+04.01. 04.01. �berweisungsauftrag                                                 337,51 S
+              Frank Zenz
+              Autoversicherung + Baguettes TAN:760771 IBAN: DE525746
+              01170004101001 BIC: GENODED1NWD
+05.01. 05.01. Kartenzahlung girocard                                               40,02 S
+              SG-VR Payment GmbH
+              ED-Tankstelle Katzer Faid/FAID/DE
+              04.01.2022 um 14:12:21 Uhr 76549519/123618/CICC/FPIN
+              57460117/0004107008/1/1224 REF 485377/260048
+06.01. 06.01. Kartenzahlung girocard                                               56,39 S
+              5336 EDEKA MARKT TREIS- K
+              5336 NEUKAUF MARKT TREIS-/TREIS-KARDE/DE
+              05.01.2022 um 19:38:56 Uhr 54501598/551784/ECTL/NPIN
+              57460117/0004107008/1/1224 REF 073589/260048
+12.01. 12.01. Kartenzahlung girocard                                               46,86 S
+              5336 EDEKA MARKT TREIS- K
+              5336 NEUKAUF MARKT TREIS-/TREIS-KARDE/DE
+              11.01.2022 um 17:07:18 Uhr 54501600/610673/ECTL/
+              57460117/0004107008/1/1224
+                                            �bertrag auf Blatt 2                          4.215,30 H
