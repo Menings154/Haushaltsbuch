@@ -81,17 +81,3 @@ class VRReader(PdfReader):
             output.append((self.all_trnsctn[i], self.all_trns_values[i], int(self.all_trns_dates[i][:2]), int(self.all_trns_dates[i][3:]), self.year))
         return output
 
-path = r"C:\Users\Benja\Code\Python\Finanzen\Haushaltsbuch\data\input\202201\20220131 Kontoauszug.pdf"
-test = VRReader(path)
-print(test.alter_Kontostand)
-print(test.neuer_Kontostand)
-print(len(test.all_trnsctn))
-for i in test.all_trnsctn:
-    print(i)
-print(len(test.all_trns_dates))
-print(test.all_trns_dates)
-print(test.all_trns_values)
-print(test.year)
-print(len(test.output))
-for i in test.output:
-    print(i)
