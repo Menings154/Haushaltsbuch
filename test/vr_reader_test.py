@@ -1,4 +1,4 @@
-from reading.vr_bank_kontoauszug_reader import VRReader
+from src.reading.vr_bank_kontoauszug_reader import VRReader
 
 path = r"C:\Users\Benja\Code\Python\Finanzen\Haushaltsbuch\data\input\202201\20220131 Kontoauszug.pdf"
 test = VRReader(path)

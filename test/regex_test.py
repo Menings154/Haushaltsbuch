@@ -15,3 +15,13 @@ regex = "\d\d\.\d\d.\s\d\d\.\d\d"
 
 results = re.split(regex, txt)
 print(results)
+
+
+print(re.search(regex, "hiho"))
+print(re.search(regex, txt))
+
+dic={"hi": "ho",
+    "ha": 3}
+
+print(dic.keys())
+print(dic["hi"])

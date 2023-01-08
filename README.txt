@@ -27,3 +27,5 @@ v) tägliches Portmoneesystem integrieren
 
 
 # Monate und Jahre auch gruppieren?
+
+Es muss unbedingt über die structur nachgedacht werden, das laden von den einzelnen teilpackages ist irgendwie schwer

@@ -1,5 +1,5 @@
-from Transaction import Transaction
-from Categorizer import CategorizerInstance
+from data_structure.Transaction import Transaction
+#from Categorizer import CategorizerInstance
 
 class Category:
     def __init__(self, name):
