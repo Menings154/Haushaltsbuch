@@ -5,7 +5,7 @@ from data_structure.Category import Category, Categories
 class Categorizer:
     def __init__(self):
         self.lut = {} # später loading from file oder so adden struktur dic[trnctn.name] = category
-        self.input_txt = "This Transaction has yet not been categorized. \n Please add or map a category to this transaction. \n Following the exsisting category: "
+        self.input_txt = "This Transaction has not been categorized yet. \n Please add or map a category to this transaction. \n Following the exsisting category: "
         # self.categories = None
     
     def load(self): # lut
@@ -27,7 +27,7 @@ class Categorizer:
         try:
             return self.lut[trnsctn.name]
         except:
-            self.new_relation(trnsctn)
+            return self.new_relation(trnsctn)
     
     def new_relation(self, trnsctn):
         # if not isinstance(trnsctn, Transaction):
@@ -36,8 +36,11 @@ class Categorizer:
         new_trns_cat_relation = input(self.input_txt)
         for category in Categories.members:
             if new_trns_cat_relation == category.name:
+                self.add_lut(trnsctn, category)
                 return category
-        return Category(new_trns_cat_relation)
+        category = Category(new_trns_cat_relation)
+        self.add_lut(trnsctn, category)
+        return category
 
     def change_input_txt(self):
         for category in Categories.members:

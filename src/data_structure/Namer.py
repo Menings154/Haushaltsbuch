@@ -7,6 +7,9 @@ class Namer:
     def load(self):
         pass
 
+    def save(self):
+        pass
+
     def name(self, text):
         for regex in self.lut.keys():
             result = re.search(regex, text)

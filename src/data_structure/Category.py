@@ -4,7 +4,7 @@ from data_structure.Transaction import Transaction
 class Category:
     def __init__(self, name):
         self.name = name
-        Categories.add_members()
+        Categories.add_member(self)
         self.members = []
     
     def add_member(self, trnsctn):

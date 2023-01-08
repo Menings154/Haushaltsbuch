@@ -7,6 +7,9 @@ Reader = VRReader(path)
 
 test_name = Namer.NamerInstance.name(Reader.output[0][0])
 
-test_name_2 = Namer.NamerInstance.name(Reader.output[0][0])
-print(test_name)
-print(test_name_2)
+test_trns = Transaction.Transaction(name=test_name, value=Reader.output[0][1], day=Reader.output[0][2], month=Reader.output[0][3], year=Reader.output[0][4])
+
+test_trns.add_category(Categorizer.CategorizerInstance.categorize(test_trns))
+
+print(test_trns.category)
+print(Categorizer.CategorizerInstance.lut)
