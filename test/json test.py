@@ -43,4 +43,4 @@ tc.test = 'kl'
 
 print(tc.__dict__)
 tc.__dict__ = saved
-print(tc.__dict__)
+print(tc.__dict__.)

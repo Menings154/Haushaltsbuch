@@ -1,18 +1,13 @@
 # from Transaction import Transaction
 from data_structure.Category import Category, Categories
+from data_structure.Saver import Saver
 
-
-class Categorizer:
+class Categorizer(Saver):
     def __init__(self):
+        self.filepath = r".\data\saved objects\Categorizer.json"
         self.lut = {} # später loading from file oder so adden struktur dic[trnctn.name] = category
         self.input_txt = "This Transaction has not been categorized yet. \n Please add or map a category to this transaction. \n Following the exsisting category: "
         # self.categories = None
-    
-    def load(self): # lut
-        pass
-
-    def save(self):
-        pass
 
     def add_lut(self, trnsctn, category):
         # if not isinstance(trnsctn, Transaction):
@@ -20,6 +15,7 @@ class Categorizer:
         # if not isinstance(category, Category):
         #     raise ValueError("invalid category...")    
         self.lut[trnsctn.name] = category
+        self.save()
     
     def categorize(self, trnsctn):
         # if not isinstance(trnsctn, Transaction):
@@ -49,4 +45,4 @@ class Categorizer:
 
 
 CategorizerInstance = Categorizer()
-CategorizerInstance.load()
+#CategorizerInstance.load()
