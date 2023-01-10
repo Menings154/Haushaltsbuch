@@ -27,5 +27,7 @@ v) tägliches Portmoneesystem integrieren
 
 
 # Monate und Jahre auch gruppieren?
+# zum scpeichern pickel oder json nutzen?
+    - eher json nutzen
 
 Es muss unbedingt über die structur nachgedacht werden, das laden von den einzelnen teilpackages ist irgendwie schwer
