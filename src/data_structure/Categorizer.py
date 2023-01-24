@@ -1,8 +1,9 @@
 # from Transaction import Transaction
 from data_structure.Category import Category, Categories
-from data_structure.Saver import Saver
+from data_structure.Saver import Saver, CollectionSaver
+import json
 
-class Categorizer(Saver):
+class Categorizer:
     def __init__(self):
         self.filepath = r".\data\saved objects\Categorizer.json"
         self.lut = {} # später loading from file oder so adden struktur dic[trnctn.name] = category
@@ -42,7 +43,27 @@ class Categorizer(Saver):
         for category in Categories.members:
             self.input_txt += "\n" 
             self.input_txt += category 
+    
+    def load(self):
+        with open(self.filepath ,"r") as file:
+            temp = json.load(file)
+            file.close()
+        for key in temp.keys():
+            print(key)
+            for category in Categories.members:
+                print(category.name)
+                if category.name == temp[key]:
+                    self.lut[key] = category
+                    break
+
+    def save(self):
+        temp_dict = {}
+        for key in self.lut.keys():
+            temp_dict[key] = self.lut[key].name
+        with open (self.filepath, "w") as file:
+            json.dump(temp_dict, file)
+            file.close()
 
 
 CategorizerInstance = Categorizer()
-#CategorizerInstance.load()
+CategorizerInstance.load()

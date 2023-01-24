@@ -1,0 +1,1 @@
+* eine Datenstruktur zu speichern ist schwer, daher zu beginn überlegen, wie ich DIe Struktur speichern will

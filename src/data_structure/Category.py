@@ -11,7 +11,6 @@ class Category(Saver):
         self.filepath = r".\data\saved objects\Categories\\" + self.name + ".json"
         self.save()
 
-
     def add_member(self, trnsctn):
         if not isinstance(trnsctn, Transaction):
             raise ValueError("Error while adding Transaction to a category...")
@@ -35,6 +34,7 @@ class Category(Saver):
             temp = Transaction(member['name'], member['value'], member['day'], member['month'], member['year'])
             all_members_temp.append(temp)
         self.members = all_members_temp
+
 
 class AllCategories:
     def __init__(self,):

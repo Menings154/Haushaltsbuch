@@ -1,14 +1,20 @@
 import re
+import json
 
 class Namer:
     def __init__(self):
         self.lut = {}
+        self.filepath = r".\data\saved objects\Namer.json"
 
     def load(self):
-        pass
+        with open(self.filepath, "r") as file:
+            self.lut = json.load(file)
+            file.close()
 
     def save(self):
-        pass
+        with open(self.filepath, "w") as file:
+            json.dump(self.lut, file)
+            file.close()
 
     def name(self, text):
         for regex in self.lut.keys():
@@ -25,6 +31,7 @@ class Namer:
         print("Also please give the transaction a regex.")
         regex = input()
         self.lut[regex] = name
+        self.save()
         return name
 
 NamerInstance = Namer()
