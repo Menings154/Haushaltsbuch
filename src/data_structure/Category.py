@@ -6,9 +6,12 @@ from data_structure.Saver import Saver
 class Category(Saver):
     def __init__(self, name):
         self.name = name
-        Categories.add_member(self)
+        try:
+            Categories.add_member(self)
+        except AttributeError:
+            pass
         self.members = []
-        self.filepath = r".\data\saved objects\Categories\\" + self.name + ".json"
+        self.filepath = r"C:\Users\Benja\Code\Python\Finanzen\Haushaltsbuch\data\saved objects\Categories\\" + self.name + ".json"
         self.save()
 
     def add_member(self, trnsctn):
@@ -26,19 +29,19 @@ class Category(Saver):
             file.close()
 
     def load(self):
-        file = open(self.filepath, "r")
-        self.__dict__ = json.load(file)
-        all_members = self.members
-        all_members_temp = []
-        for member in all_members:
-            temp = Transaction(member['name'], member['value'], member['day'], member['month'], member['year'])
-            all_members_temp.append(temp)
-        self.members = all_members_temp
-
+        with open(self.filepath, "r") as file:
+            self.__dict__ = json.load(file)
+            all_members = self.members
+            all_members_temp = []
+            for member in all_members:
+                temp = Transaction(member['name'], member['value'], member['day'], member['month'], member['year'])
+                all_members_temp.append(temp)
+            self.members = all_members_temp
+            file.close()
 
 class AllCategories:
     def __init__(self,):
-        self.filepath = r".\data\saved objects\AllCategories.json"
+        self.filepath = r"C:\Users\Benja\Code\Python\Finanzen\Haushaltsbuch\data\saved objects\AllCategories.json"
         self.members = []
 
     def add_member(self, category):
@@ -48,14 +51,16 @@ class AllCategories:
         self.save()
     
     def load(self):
-        file = open(self.filepath, "r")
-        self.__dict__ = json.load(file)
-        all_names = self.members
-        all_members_temp = []
-        for member in all_names:
-            temp = Category(name=member)
-            temp.load()
-        self.members = all_members_temp
+        with open(self.filepath, "r") as file:
+            self.__dict__ = json.load(file)
+            all_names = tuple(self.members)
+            for member in all_names:
+                temp = Category(name=member)
+                temp.load()
+                self.members.remove(member)
+                #all_members_temp.append(temp)
+            #self.members = all_members_temp
+            file.close()
 
     def save(self):
         all_names = [member.name for member in self.members]
@@ -67,4 +72,4 @@ class AllCategories:
 
 
 Categories = AllCategories()
-# Categories.load()
+Categories.load()

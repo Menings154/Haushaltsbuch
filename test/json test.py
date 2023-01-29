@@ -35,12 +35,17 @@ tc = Testclass()
 #     json.dump(tc.__dict__, file)
 
 
-with open("json_save_test.json", 'r') as file:
-    saved = json.load(file)
-print(saved)
+# with open("json_save_test.json", 'r') as file:
+#     saved = json.load(file)
+# print(saved)
 
-tc.test = 'kl'
+# tc.test = 'kl'
 
-print(tc.__dict__)
-tc.__dict__ = saved
-print(tc.__dict__.)
+# print(tc.__dict__)
+# tc.__dict__ = saved
+# print(tc.__dict__.)
+
+a = [5]
+b = tuple(a)
+a.append(3)
+print(b)

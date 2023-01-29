@@ -5,7 +5,7 @@ import json
 
 class Categorizer:
     def __init__(self):
-        self.filepath = r".\data\saved objects\Categorizer.json"
+        self.filepath = r"C:\Users\Benja\Code\Python\Finanzen\Haushaltsbuch\data\saved objects\Categorizer.json"
         self.lut = {} # später loading from file oder so adden struktur dic[trnctn.name] = category
         self.input_txt = "This Transaction has not been categorized yet. \n Please add or map a category to this transaction. \n Following the exsisting category: "
         # self.categories = None
@@ -51,7 +51,8 @@ class Categorizer:
         for key in temp.keys():
             print(key)
             for category in Categories.members:
-                print(category.name)
+                print(category)
+                print(category.name) # here
                 if category.name == temp[key]:
                     self.lut[key] = category
                     break

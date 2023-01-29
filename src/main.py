@@ -16,3 +16,5 @@ test_trns.add_category(Categorizer.CategorizerInstance.categorize(test_trns))
 
 # print(test_trns.category)
 print(Categorizer.CategorizerInstance.lut)
+
+# nun müssen die monate und so hinzugefüft werden

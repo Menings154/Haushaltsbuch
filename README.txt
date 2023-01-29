@@ -31,3 +31,5 @@ v) tägliches Portmoneesystem integrieren
     - eher json nutzen
 
 Es muss unbedingt über die structur nachgedacht werden, das laden von den einzelnen teilpackages ist irgendwie schwer
+
+für die Entwicklung hardcode ich die pathes, dass sollte später überarbeitet werden, wenn auch das package generell überarbeitete wird
