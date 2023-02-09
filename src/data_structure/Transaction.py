@@ -1,8 +1,7 @@
 # from Category import Category
 import json
-from data_structure.Saver import Saver, CollectionSaver
 
-class Transaction(Saver):
+class Transaction:
     def __init__(self, name, value, day, month, year):
         self.name = name
         self.value = value
@@ -10,7 +9,7 @@ class Transaction(Saver):
         self.month = month
         self.year = year
         self.category = None
-        self.filepath = r".\data\saved objects\Transactions\\" + str(name) + str(day) + str(month) + str(year) +".json"
+        self.filepath = r"C:\Users\Benja\Code\Python\Finanzen\Haushaltsbuch\data\saved objects\Transactions\\" + str(name) + str(day) + str(month) + str(year) +".json"
         # ist diese Datenstruktur so gut gelöst?
         self.save()
         Transactions.add_member(self)
@@ -21,12 +20,21 @@ class Transaction(Saver):
         self.category = category
         self.save
 
+    def load(self):
+        with open(self.filepath, "r") as file:
+            self.__dict__ = json.load(file)
+            file.close()
 
-class AllTransactions(CollectionSaver):
+    def save(self):
+        with open(self.filepath, "w+") as file:
+            json.dump(self.__dict__, file)
+            file.close()
+
+
+class AllTransactions:
     def __init__(self):
-        self.filepath = r".\data\saved objects\AllTransitions.json"
+        self.filepath = r"C:\Users\Benja\Code\Python\Finanzen\Haushaltsbuch\data\saved objects\AllTransitions.json"
         self.members = []
-        self.Object = Transaction
 
     def add_member(self, trns):
         if not isinstance(trns, Transaction):
@@ -34,23 +42,32 @@ class AllTransactions(CollectionSaver):
         self.members.append(trns)
         self.save()
 
-    # def save(self):
-    #     trns_temp = [trns.__dict__ for trns in self.members]
-    #     temp_dict = self.__dict__
-    #     temp_dict["members"] = trns_temp
-    #     with open(self.filepath, "w+") as file:
-    #         json.dump(temp_dict, file)
-    #         file.close()
-
-    # def load(self):
-    #     file = open(self.filepath, "r")
-    #     self.__dict__ = json.load(file)
-    #     all_members = self.members
-    #     all_members_temp = []
-    #     for member in all_members:
-    #         temp = Transaction(member['name'], member['value'], member['day'], member['month'], member['year'])
-    #         all_members_temp.append(temp)
-    #     self.members = all_members_temp
+    def load(self):
+        with open(self.filepath, "r") as file:
+            self.__dict__ = json.load(file)
+            all_members = self.members
+            all_members_temp = []
+            for member in all_members:
+                    temp = Transaction(member['name'], member['value'],
+                                        member['day'], member['month'],
+                                        member['year'])
+            all_members_temp.append(temp)
+            self.members = all_members_temp
+            file.close()
+        
+    def save(self):
+        print(self.members)
+        object_temp = [trns.__dict__ for trns in self.members]
+        temp_dict = self.__dict__.copy()
+        temp_dict["members"] = object_temp
+        for member in temp_dict["members"]:
+            if member["category"] != None:
+                member["category"] = member["category"].name
+        # print(type(temp_dict))
+        # print(temp_dict)
+        with open(self.filepath, "w+") as file:
+            json.dump(temp_dict, file)
+            file.close()
 
 
 Transactions = AllTransactions()

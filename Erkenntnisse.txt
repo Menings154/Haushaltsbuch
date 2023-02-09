@@ -1,1 +1,9 @@
 * eine Datenstruktur zu speichern ist schwer, daher zu beginn überlegen, wie ich DIe Struktur speichern will
+* wenn ich mir Klassen überlege wirklich alle Attribute und funktionen hinschreiben und dann abgleichen, ob manche klassen eigentlich gleich
+* Klassenstruktur wirklich mehr überlegen und aus allen Blickwinkel betrachten, also:
+    - logik
+    - redundanz
+    - speicherbar
+    - sicherheit
+    - hier weiteres einfügen
+*try:.... except:pass nicht machen, immer was printen, da pass schwer zu bemerken

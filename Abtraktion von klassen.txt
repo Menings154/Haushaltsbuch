@@ -1,0 +1,26 @@
+Category:
+    + name
+    + members
+    + filepath
+
+    # init
+    # add_member
+    # save
+    # load
+
+Month:
+    + name
+    + members
+    + filepath
+
+    # init
+    # add_member
+    # save 
+    # load
+
+==> month, year, day, dayoftheweek können die gleichen Klassen sein wie category
+
+==> AllMonth, ... können die gleichen Klassen sein wie AllCategories
+
+Frage: 
+    - mache ich eine Parentclass, um input zu validieren? --> ja

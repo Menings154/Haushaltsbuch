@@ -4,7 +4,7 @@ import json
 class Namer:
     def __init__(self):
         self.lut = {}
-        self.filepath = r".\data\saved objects\Namer.json"
+        self.filepath = r"C:\Users\Benja\Code\Python\Finanzen\Haushaltsbuch\data\saved objects\Namer.json"
 
     def load(self):
         with open(self.filepath, "r") as file:

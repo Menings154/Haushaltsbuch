@@ -7,7 +7,7 @@ class Month:
         self.month = month
         self.members = []
     
-    def add_members(self, trnsctn):
+    def add_member(self, trnsctn):
         if not isinstance(trnsctn, Transaction):
             raise ValueError("Error while adding Transaction to a Month...")
         self.members.append(trnsctn)

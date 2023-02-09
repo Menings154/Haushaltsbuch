@@ -33,3 +33,7 @@ v) tägliches Portmoneesystem integrieren
 Es muss unbedingt über die structur nachgedacht werden, das laden von den einzelnen teilpackages ist irgendwie schwer
 
 für die Entwicklung hardcode ich die pathes, dass sollte später überarbeitet werden, wenn auch das package generell überarbeitete wird
+
+Regex sollten am besten direkt überprüft werden
+
+StdClass nochmal überarbeiten

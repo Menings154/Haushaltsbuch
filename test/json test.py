@@ -31,8 +31,10 @@ tc = Testclass()
 # print(tc.__dict__)
 # tc.hi='ha'
 
-# with open("json_save_test.json", 'w') as file:
-#     json.dump(tc.__dict__, file)
+tc.flag = False
+print(tc.__dict__)
+with open("json_save_test.json", 'w') as file:
+    json.dump(tc.__dict__, file)
 
 
 # with open("json_save_test.json", 'r') as file:

@@ -10,8 +10,8 @@ class CalenderMonth:
             raise ValueError("Invalid Year...")
         self.month = month
         self.year = year
-        self.start = start
-        self.end = end
+        self.startcapital = start
+        self.endcapital = end
         self.members = []
     
     def add_members(self, trnsctn):
