@@ -1,16 +1,27 @@
-from Transaction import Transaction
+from data_structure.Transaction import Transaction
+from data_structure.std_classes import StdClass
 
-class Month:
-    def __init__(self, month:int):
+class Month(StdClass):
+    def __init__(self, name, month:int):
         if month < 1 or month > 12:
             raise ValueError("Invalid Month...")
+        super().__init__(name)
         self.month = month
-        self.members = []
+        self.filepath = r"C:\Users\Benja\Code\Python\Finanzen\Haushaltsbuch\data\saved objects\\Time\Months\\" + self.name + ".json"
+        self.save()
     
     def add_member(self, trnsctn):
         if not isinstance(trnsctn, Transaction):
             raise ValueError("Error while adding Transaction to a Month...")
-        self.members.append(trnsctn)
+        super().add_member(trnsctn)
+
+    def load(self):
+        all_members = super().load()
+        all_members_temp = []
+        for member in all_members:
+            temp = Transaction(member['name'], member['value'], member['day'], member['month'], member['year'])
+            all_members_temp.append(temp)
+        self.members = all_members_temp
 
 
 class AllMonths:
