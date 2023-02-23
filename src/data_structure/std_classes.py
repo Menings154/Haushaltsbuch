@@ -12,7 +12,7 @@ class StdClass:
 
     def save(self):
         member_temp = [member.__dict__ for member in self.members]
-        temp_dict = self.__dict__
+        temp_dict = self.__dict__.copy()
         temp_dict["members"] = member_temp
         with open(self.filepath, "w+") as file:
             json.dump(temp_dict, file)

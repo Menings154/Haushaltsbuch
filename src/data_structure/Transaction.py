@@ -56,7 +56,6 @@ class AllTransactions:
             file.close()
         
     def save(self):
-        print(self.members)
         object_temp = [trns.__dict__ for trns in self.members]
         temp_dict = self.__dict__.copy()
         temp_dict["members"] = object_temp
