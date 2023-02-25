@@ -62,10 +62,5 @@ class AllYears:
 
 Years = AllYears()
 Years.load()
-# Years.load()
-# Days.flag = True
-
-# for i in range(1, 32):
-#     Day(name=str(i), day=i)
-
-# [print(member.name, member.day) for member in Days.members]
+# Years.flag = True
+# Year(str(2022), 2022)
