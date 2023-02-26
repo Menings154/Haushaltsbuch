@@ -5,6 +5,16 @@ path = r"C:\Users\Benja\Code\Python\Finanzen\Haushaltsbuch\data\input\202201\202
 
 Reader = VRReader(path)
 
+def read(path, Reader):
+    
+    for count, value in enumerate(Reader.output):
+        name = Namer.NamerInstance.name(value[0])
+        trnsctn = Transaction.Transaction(name=name,
+                                          value=value[1],
+                                          day=value[2],
+                                          month=value[3],
+                                          year=value[4])
+    return
 print('finished')
 # def read_month()
 # for i in range(2):
