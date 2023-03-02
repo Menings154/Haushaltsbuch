@@ -15,8 +15,9 @@ def read(reader):
         trnsctn = Transaction.Transaction(name=name, value = value[1],
                                           day=value[2], month=value[3],
                                           year=value[4])
-        trnsctn.add_category(Categorizer.CategorizerInstance.categorize(trnsctn))
-        
+        category = Categorizer.CategorizerInstance.categorize(trnsctn).add_member(trnsctn)
+        trnsctn.add_category(category.name)
+
         for member in Day.Days.members:
             if member.day == trnsctn.day:
                 member.add_member(trnsctn)
@@ -33,4 +34,6 @@ def read(reader):
         DayOfTheWeek.add_to_day_of_the_week(trnsctn=trnsctn)
         spmonth.add_member(trnsctn=trnsctn)
     return
+
+read(reader=Reader)
 print('finished')

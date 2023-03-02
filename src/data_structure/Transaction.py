@@ -8,15 +8,13 @@ class Transaction:
         self.day = day
         self.month = month
         self.year = year
-        self.category = None
+        # self.category = None # Brauch eine TRansaction überhaupt eine Kategorie?
         self.filepath = r"C:\Users\Benja\Code\Python\Finanzen\Haushaltsbuch\data\saved objects\Transactions\\" + str(name) + str(day) + str(month) + str(year) +".json"
         # ist diese Datenstruktur so gut gelöst?
         self.save()
         Transactions.add_member(self)
         
-    def add_category(self, category): # macht das hier so sinn?
-        # if not isinstance(category, Category):
-        #     raise ValueError("Invalid category...")
+    def add_category(self, category): 
         self.category = category
         self.save
 
@@ -59,9 +57,9 @@ class AllTransactions:
         object_temp = [trns.__dict__ for trns in self.members]
         temp_dict = self.__dict__.copy()
         temp_dict["members"] = object_temp
-        for member in temp_dict["members"]:
-            if member["category"] != None:
-                member["category"] = member["category"].name
+        # for member in temp_dict["members"]:
+        #     if member["category"] != None:
+        #         member["category"] = member["category"].name
         # print(type(temp_dict))
         # print(temp_dict)
         with open(self.filepath, "w+") as file:

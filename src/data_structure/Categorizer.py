@@ -6,15 +6,11 @@ import json
 class Categorizer:
     def __init__(self):
         self.filepath = r"C:\Users\Benja\Code\Python\Finanzen\Haushaltsbuch\data\saved objects\Categorizer.json"
-        self.lut = {} # später loading from file oder so adden struktur dic[trnctn.name] = category
+        self.lut = {}
         self.input_txt = "This Transaction has not been categorized yet. \n Please add or map a category to this transaction. \n Following the exsisting categories:\n"
         # self.categories = None
 
     def add_lut(self, trnsctn, category):
-        # if not isinstance(trnsctn, Transaction):
-        #     raise ValueError("Invalid transaction...")
-        # if not isinstance(category, Category):
-        #     raise ValueError("invalid category...")    
         self.lut[trnsctn.name] = category
         self.save()
     
