@@ -1,12 +1,15 @@
-from Saver import Saver
+# from Saver import Saver
 
-test = Saver()
-test.filepath = "savetest.json"
+# test = Saver()
+# test.filepath = "savetest.json"
 
-# test.method = 'first_test'
-# test.method2 = 4
+# # test.method = 'first_test'
+# # test.method2 = 4
 
-# test.save()
+# # test.save()
 
-test.load()
-print(test.method)
+# test.load()
+# print(test.method)
+
+if input() == "True":
+    print('check')

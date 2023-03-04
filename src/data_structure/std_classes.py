@@ -11,6 +11,14 @@ class StdClass:
         self.save()
 
     def save(self):
+        member_temp = []
+        # for member in self.members:
+        #     try:
+        #         cat_name_temp = member["category"].name
+        #         temp_dic = member.__dict__.copy()
+        #         temp_dic["category"] = cat_name_temp
+        #         member_temp.append(temp_dic)
+        #     else ValueError:
         member_temp = [member.__dict__ for member in self.members]
         temp_dict = self.__dict__.copy()
         temp_dict["members"] = member_temp

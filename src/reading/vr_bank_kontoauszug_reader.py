@@ -12,6 +12,7 @@ class VRReader(PdfReader):
         self.all_trns_dates = self.get_all_trns_dates()
         self.all_trns_values = self.get_all_trns_values()
         self.year = self.get_year()
+        self.month = self.get_month()
         self.output = self.get_output()
         # touple aus dates und trnsaction machen?
 
@@ -74,6 +75,11 @@ class VRReader(PdfReader):
         regex_year = "\d+/\d\d\d\d"
         text = self.pages[0].extract_text()
         return int(re.search(regex_year, text)[0][-4:])
+    
+    def get_month(self):
+        regex_month = "\d+/\d\d\d\d"
+        text = self.pages[0].extract_text()
+        return int(re.search(regex_month, text)[0][:-5])
 
     def get_output(self):
         output = []
