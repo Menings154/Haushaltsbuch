@@ -36,6 +36,7 @@ class Categorizer:
         return category
 
     def change_input_txt(self):
+        self.input_txt = "This Transaction has not been categorized yet. \n Please add or map a category to this transaction. \n Following the exsisting categories:\n"
         for category in Categories.members:
             self.input_txt += ' > '
             self.input_txt += category.name

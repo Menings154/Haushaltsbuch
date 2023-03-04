@@ -15,7 +15,8 @@ def read(reader):
         trnsctn = Transaction.Transaction(name=name, value = value[1],
                                           day=value[2], month=value[3],
                                           year=value[4])
-        category = Categorizer.CategorizerInstance.categorize(trnsctn).add_member(trnsctn)
+        category = Categorizer.CategorizerInstance.categorize(trnsctn)
+        category.add_member(trnsctn)
         trnsctn.add_category(category.name)
 
         for member in Day.Days.members:

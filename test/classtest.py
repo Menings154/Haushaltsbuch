@@ -24,7 +24,10 @@
 
 import re
 
-text = 'hallo'
+text = """Überweisungsauftrag                                                 337,51 S
+              Frank Zenz
+              Autoversicherung + Baguettes TAN:760771 IBAN: DE525746
+              01170004101001 BIC: GENODED1NWD"""
 
-print(re.search('ll', text))
+print(re.search('Autoversicherung', text))
 print(re.search('jj', text))

@@ -20,7 +20,7 @@ class Namer:
         for regex in self.lut.keys():
             result = re.search(regex, text)
             if result != None:
-                print("PLease check the Mapping")
+                print("Please check the Mapping")
                 print("Text: ", text, "> mapping: ", self.lut[regex])
                 if input("true or false?") == "true":
                     return self.lut[regex]
@@ -34,10 +34,10 @@ class Namer:
         print("Also please give the transaction a regex.")
         while True:
             regex = input()
-            if re.search(regex, text) is None:
+            if re.search(regex, text) is not None:
                 break
             else:
-                print("Regex: ", regex, "could not be found in the text... Please enter a new regex.")
+                print("Regex: ", regex, "could not be found in the text...", text, "Please enter a new regex.")
         self.lut[regex] = name
         self.save()
         return name
