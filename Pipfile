@@ -8,6 +8,7 @@ numpy = "*"
 pandas = "*"
 pypdf2 = {extras = ["crypto"], version = "*"}
 datetime = "*"
+matplotlib = "*"
 
 [dev-packages]
 

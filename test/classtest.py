@@ -1,19 +1,35 @@
-# class Parent:
-#     def __init__(self, name):
-#         self.name = name
-#     def print_hi(self):
-#         print('hi from parent class')
+class Parent:
+    def __init__(self, name):
+        self.member =  []
 
-# class child(Parent):
-#     def __init__(self, name):
-#         super().__init__(name)
+    def print_hi(self):
+        print('hi from parent class')
+        print(self.member)
+        self.speak()
+    
+    def speak(self):
+        print("Parent")
 
-#     def print_hi(self):
-#         super().print_hi()
+class child(Parent):
+    def __init__(self, name):
+        super().__init__(name)
+        self.name = "child"
+        self.member = []
 
-# test = child("DiesName")
-# test.print_hi()
-# print(test.name)
+    def print_hi(self):
+        super().print_hi()
+        print(self.name)
+    
+    def speak(self):
+        print("Child")
+
+
+test = child("DiesName")
+test.member.append('hi')
+test.print_hi()
+
+print(test.member)
+
 
 # # dic = {'a': 1}
 
@@ -22,12 +38,13 @@
 # # print(test)
 # # print(dic)
 
-import re
+# import re
 
-text = """Überweisungsauftrag                                                 337,51 S
-              Frank Zenz
-              Autoversicherung + Baguettes TAN:760771 IBAN: DE525746
-              01170004101001 BIC: GENODED1NWD"""
+# text = """Überweisungsauftrag                                                 337,51 S
+#               Frank Zenz
+#               Autoversicherung + Baguettes TAN:760771 IBAN: DE525746
+#               01170004101001 BIC: GENODED1NWD"""
 
-print(re.search('Autoversicherung', text))
-print(re.search('jj', text))
+# print(re.search('Autoversicherung', text))
+# print(re.search('jj', text))
+

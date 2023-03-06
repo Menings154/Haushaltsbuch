@@ -6,13 +6,14 @@ class Category(StdClass):
     def __init__(self, name):
         super().__init__(name)
         self.filepath = r"C:\Users\Benja\Code\Python\Finanzen\Haushaltsbuch\data\saved objects\Categories\\" + self.name + ".json"
-        self.save()
+#        self.save()
         Categories.add_member(self)
     
     def add_member(self, trns):
         if not isinstance(trns, Transaction):
             raise ValueError("Error while adding Transaction to a category...")
         super().add_member(trns)
+        #self.save()
     
     def load(self):
         all_members = super().load()

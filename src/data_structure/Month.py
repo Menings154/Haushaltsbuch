@@ -10,7 +10,7 @@ class Month(StdClass):
         super().__init__(name)
         self.month = month
         self.filepath = r"C:\Users\Benja\Code\Python\Finanzen\Haushaltsbuch\data\saved objects\\Time\Months\\" + self.name + ".json"
-        self.save()
+        #self.save()
         Months.add_member(self)
     
     def add_member(self, trnsctn):

@@ -14,7 +14,7 @@ class SpecificMonth(StdClass):
         self.start_balance = None
         self.final_balance = None
         self.filepath = r"C:\Users\Benja\Code\Python\Finanzen\Haushaltsbuch\data\saved objects\\Time\SpecificMonths\\" + self.name + ".json"
-        self.save()
+        #self.save()
         SpecificMonths.add_member(self)
     
     def add_member(self, trnsctn):

@@ -10,7 +10,7 @@ class Day(StdClass):
         super().__init__(name)
         self.day = day
         self.filepath = r"C:\Users\Benja\Code\Python\Finanzen\Haushaltsbuch\data\saved objects\\Time\Days\\" + self.name + ".json"
-        self.save()
+       # self.save()
         Days.add_member(self)
     
     def add_member(self, trnsctn):

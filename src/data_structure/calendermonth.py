@@ -18,6 +18,7 @@ class CalenderMonth:
         if not isinstance(trnsctn, Transaction):
             raise ValueError("Invalid Transaction...")
         self.members.append(trnsctn)
+        #self.save()
 
 class AllCalenderMonths:
     def __init__(self):

@@ -7,7 +7,7 @@ Reader = VRReader(path)
 
 def read(reader):
     spmonth = SpecificMonth.SpecificMonth(name=str(reader.month)+str(reader.year), 
-                                          month=reader.month, year=reader.year)
+                                          month=reader.month, year=reader.year) # hier drüber muss ich mir vielleicht noch gedanken machen
     spmonth.add_start_balance(reader.alter_Kontostand)
     spmonth.add_final_balance(reader.neuer_Kontostand)
     for count, value in enumerate(reader.output):
@@ -18,20 +18,18 @@ def read(reader):
         category = Categorizer.CategorizerInstance.categorize(trnsctn)
         category.add_member(trnsctn)
         trnsctn.add_category(category.name)
+        trnsctn.save()
 
         for member in Day.Days.members:
             if member.day == trnsctn.day:
-                member.add_member(trnsctn)
+               member.add_member(trnsctn)
         for member in Month.Months.members:
             if member.month == trnsctn.month:
                 member.add_member(trnsctn)
         for member in Year.Years.members:
             if member.year == reader.year:
                 member.add_member(trnsctn)
-        for member in Month.Months.members:
-            if member.month == trnsctn.month:
-                member.add_member(trnsctn)
-        
+
         DayOfTheWeek.add_to_day_of_the_week(trnsctn=trnsctn)
         spmonth.add_member(trnsctn=trnsctn)
     return

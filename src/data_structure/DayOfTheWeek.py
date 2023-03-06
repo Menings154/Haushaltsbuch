@@ -15,7 +15,7 @@ class DayOfTheWeek(StdClass):
         super().__init__(name)
         self.dayoftheweek = dayoftheweek
         self.filepath = r"C:\Users\Benja\Code\Python\Finanzen\Haushaltsbuch\data\saved objects\\Time\DayOfTheWeek\\" + self.name + ".json"
-        self.save()
+        #self.save()
         DaysOfTheWeek.add_member(self)
     
     def add_member(self, trnsctn):

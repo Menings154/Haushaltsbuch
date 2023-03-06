@@ -10,7 +10,7 @@ class Year(StdClass):
         super().__init__(name)
         self.year = year
         self.filepath = r"C:\Users\Benja\Code\Python\Finanzen\Haushaltsbuch\data\saved objects\\Time\Years\\" + self.name + ".json"
-        self.save()
+        #self.save()
         Years.add_member(self)
     
     def add_member(self, trnsctn):
