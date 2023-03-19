@@ -7,3 +7,6 @@
     - sicherheit
     - hier weiteres einfügen
 *try:.... except:pass nicht machen, immer was printen, da pass schwer zu bemerken
+
+
+* es wäre ganz nice für die Categorien einen dictionary zu nutzen
