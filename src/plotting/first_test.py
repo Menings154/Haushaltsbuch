@@ -24,7 +24,12 @@ monthly_money = []
 for member in SpecificMonth.SpecificMonths.members:
     monthly_money.append(member.final_balance)
 
-x2 = np.linspace(0, len(SpecificMonth.SpecificMonths.members))
+x2 = np.linspace(0, len(SpecificMonth.SpecificMonths.members)+1, 1)
 ax2.plot( monthly_money)
 
+# %% linearer fit 
+
+#result = np.polyfit(x2, monthly_money, 1)
+print(len(list(x2)))
+print(len(monthly_money))
 # %%
