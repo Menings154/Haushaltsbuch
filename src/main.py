@@ -14,10 +14,14 @@ path10 = r"C:\Users\Benja\Code\Python\Finanzen\Haushaltsbuch\data\input\202210\4
 path11 = r"C:\Users\Benja\Code\Python\Finanzen\Haushaltsbuch\data\input\202211\4107008_2022_Nr.011_Kontoauszug_vom_2022.11.30_20230311115358.pdf"
 path12 = r"C:\Users\Benja\Code\Python\Finanzen\Haushaltsbuch\data\input\202212\4107008_2022_Nr.012_Kontoauszug_vom_2022.12.31_20230311115402.pdf"
 path13 = r"C:\Users\Benja\Code\Python\Finanzen\Haushaltsbuch\data\input\202301\4107008_2023_Nr.001_Kontoauszug_vom_2023.01.31_20230311115406.pdf"
-
 path14 = r"C:\Users\Benja\Code\Python\Finanzen\Haushaltsbuch\data\input\202302\4107008_2023_Nr.002_Kontoauszug_vom_2023.02.28_20230311115410.pdf"
+path15 = r"C:\Users\Benja\Code\Python\Finanzen\Haushaltsbuch\data\input\202303\4107008_2023_Nr.003_Kontoauszug_vom_2023.04.01_20230402103536.pdf"
 
-Reader = VRReader(path14)
+path16 = r"C:\Users\Benja\Code\Python\Finanzen\Haushaltsbuch\data\input\202304\4107008_2023_Nr.004_Kontoauszug_vom_2023.04.28_20230603145128.pdf"
+path17 = r"C:\Users\Benja\Code\Python\Finanzen\Haushaltsbuch\data\input\202305\4107008_2023_Nr.005_Kontoauszug_vom_2023.06.01_20230603145132.pdf"
+
+
+Reader = VRReader(path17)
 
 def read(reader):
     spmonth = SpecificMonth.SpecificMonth(name=str(reader.month)+str(reader.year), 
